@@ -12,7 +12,7 @@ client = MongoClient(host=secrets.MONGO_URI)
 fs = gridfs.GridFS(client.admin)
 
 def get_keys(key_name):
-	key_mappings = {config.ML_PUBKEY: "issuer_key", config.ML_REVOKEKEY: "revocation_key"}
+	key_mappings = {config.ML_PUBKEY: "issuerKeys", config.ML_REVOKEKEY: "revocationKeys"}
 	issuer = json.loads(read_file(config.MLISSUER_PATH))
 	address = key_mappings.get(key_name, None)
 	return issuer[address][0]["key"]
