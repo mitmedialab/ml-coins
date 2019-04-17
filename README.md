@@ -1,6 +1,5 @@
 About
 ===
-Check out the web application at [https://coins.media.mit.edu](https://coins.media.mit.edu).
 
 
 Example Certificate
